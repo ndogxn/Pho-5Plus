@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pho 5Plus — Houston</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #f8f5f0;
+      --dark: #1e1e1e;
+      --accent: #9c6b3d;
+      --soft: #efe7dd;
+    }
+
+    body {
+      margin: 0;
+      font-family: Inter, sans-serif;
+      background: var(--bg);
+      color: var(--dark);
+      line-height: 1.6;
+    }
+
+    header {
+      min-height: 90vh;
+      background: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)),
+        url("https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?auto=format&fit=crop&w=1600&q=80")
+        center/cover;
+      color: white;
+      display: flex;
+      align-items: center;
+      padding: 3rem;
+    }
+
+    .hero {
+      max-width: 600px;
+    }
+
+    h1 {
+      font-family: "Playfair Display", serif;
+      font-size: clamp(2.5rem, 5vw, 4rem);
+      margin-bottom: 1rem;
+    }
+
+    .hero p {
+      font-size: 1.1rem;
+      opacity: .95;
+    }
+
+    section {
+      padding: 4rem 2rem;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .section-title {
+      font-family: "Playfair Display", serif;
+      font-size: 2.2rem;
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+
+    /* Signature Favorites */
+
+    .menu-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 2rem;
+    }
+
+    .menu-item {
+      background: white;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 15px 40px rgba(0,0,0,.06);
+      transition: .3s ease;
+    }
+
+    .menu-item:hover {
+      transform: translateY(-5px);
+    }
+
+    .menu-item img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .menu-item div {
+      padding: 1.2rem;
+    }
+
+    /* Reviews */
+
+    .reviews {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+    }
+
+    .review {
+      background: white;
+      padding: 2rem;
+      border-radius: 16px;
+      box-shadow: 0 10px 30px rgba(0,0,0,.05);
+    }
+
+    /* Menu Layout */
+
+    .menu-category {
+      margin-bottom: 4rem;
+    }
+
+    .menu-columns {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+    }
+
+    .menu-item-row {
+      display: flex;
+      justify-content: space-between;
+      padding: .5rem 0;
+      border-bottom: 1px solid #e2e2e2;
+    }
+
+    .menu-note {
+      font-size: .9rem;
+      opacity: .75;
+      margin-top: 1rem;
+    }
+
+    @media (max-width: 800px) {
+      .menu-columns {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    footer {
+      background: var(--dark);
+      color: white;
+      text-align: center;
+      padding: 3rem 2rem;
+    }
+
+    .cta {
+      text-align: center;
+      font-size: 1.2rem;
+      margin-top: 1.5rem;
+      color: var(--accent);
+      font-weight: 500;
+    }
+
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="hero">
+    <h1>Pho 5Plus</h1>
+    <p>A hidden gem in Houston serving rich, fragrant pho and comforting Vietnamese classics in a cozy, welcoming space.</p>
+  </div>
+</header>
+
+<section>
+  <h2 class="section-title">Signature Favorites</h2>
+  <div class="menu-grid">
+    <div class="menu-item">
+      <img src="https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?auto=format&fit=crop&w=800&q=80">
+      <div><strong>Eye-Round Steak Pho</strong><br>Fragrant beef broth with tender slices of steak.</div>
+    </div>
+
+    <div class="menu-item">
+      <img src="https://images.unsplash.com/photo-1604909052818-2e0c3f2de3c2?auto=format&fit=crop&w=800&q=80">
+      <div><strong>Fried Pork Eggrolls</strong><br>Golden, crispy rolls served with fish sauce.</div>
+    </div>
+
+    <div class="menu-item">
+      <img src="https://images.unsplash.com/photo-1625943553852-781c1b66f70f?auto=format&fit=crop&w=800&q=80">
+      <div><strong>Fried Butterfly Shrimp</strong><br>Lightly battered and served with sweet & sour sauce.</div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2 class="section-title">What Guests Are Saying</h2>
+  <div class="reviews">
+    <div class="review">⭐️⭐️⭐️⭐️⭐️<br>
+    “The broth was rich and fragrant. Clean, welcoming atmosphere and incredible service.”</div>
+
+    <div class="review">⭐️⭐️⭐️⭐️⭐️<br>
+    “Best Bun Bo Hue and pho in Houston. Authentic flavors and very hospitable staff.”</div>
+
+    <div class="review">⭐️⭐️⭐️⭐️⭐️<br>
+    “Quick service, generous portions, and all the sauces ready at the table. A true neighborhood gem.”</div>
+  </div>
+</section>
+
+<section>
+  <h2 class="section-title">Menu</h2>
+
+  <!-- PHO -->
+  <div class="menu-category">
+    <h3>Phở – Noodles</h3>
+    <div class="menu-columns">
+      <div>
+        <div class="menu-item-row"><div>Eye-Round Steak</div><span>S $11 | R $14</span></div>
+        <div class="menu-item-row"><div>Beef Brisket</div><span>S $11 | R $14</span></div>
+        <div class="menu-item-row"><div>Beef Shank</div><span>S $11 | R $14</span></div>
+        <div class="menu-item-row"><div>Beef Meatball</div><span>S $11 | R $14</span></div>
+        <div class="menu-item-row"><div>Special Combo</div><span>S $13 | R $14</span></div>
+      </div>
+      <div>
+        <div class="menu-item-row"><div>Chicken</div><span>S $11 | R $14</span></div>
+        <div class="menu-item-row"><div>Shrimp</div><span>S $11 | R $14</span></div>
+        <div class="menu-item-row"><div>Spicy Beef & Pork</div><span>S $13 | R $14</span></div>
+        <div class="menu-item-row"><div>Meatless</div><span>S $7 | R $10</span></div>
+      </div>
+    </div>
+    <div class="menu-note">
+      All bowls served with beansprouts, basil, limes & jalapeños.
+    </div>
+  </div>
+
+  <!-- APPETIZERS -->
+  <div class="menu-category">
+    <h3>Appetizers</h3>
+    <div class="menu-columns">
+      <div>
+        <div class="menu-item-row"><div>Shrimp & Pork Summer Rolls</div><span>$5</span></div>
+        <div class="menu-item-row"><div>Vegan Summer Rolls</div><span>$5</span></div>
+        <div class="menu-item-row"><div>Fried Pork Eggrolls</div><span>$5</span></div>
+      </div>
+      <div>
+        <div class="menu-item-row"><div>Fried Butterfly Shrimp</div><span>$5</span></div>
+        <div class="menu-item-row"><div>Fried Pork Dumplings</div><span>$5</span></div>
+        <div class="menu-item-row"><div>Spicy Calamari Rings</div><span>$5</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- BEVERAGES -->
+  <div class="menu-category">
+    <h3>Beverages & Teas</h3>
+    <div class="menu-columns">
+      <div>
+        <div class="menu-item-row"><div>Vietnamese Iced Coffee</div><span>$4</span></div>
+        <div class="menu-item-row"><div>Thai Milk Tea</div><span>$4</span></div>
+        <div class="menu-item-row"><div>Mango Fruit Tea</div><span>$4</span></div>
+        <div class="menu-item-row"><div>Hot Jasmine Tea</div><span>$2</span></div>
+      </div>
+      <div>
+        <div class="menu-item-row"><div>Sweet Iced Tea</div><span>$4</span></div>
+        <div class="menu-item-row"><div>Unsweet Iced Tea</div><span>$1</span></div>
+        <div class="menu-item-row"><div>Lemonade</div><span>$4</span></div>
+        <div class="menu-item-row"><div>Young Coconut Juice</div><span>$4</span></div>
+      </div>
+    </div>
+    <div class="menu-note">
+      Hot Jasmine Tea comes in a teapot. Iced teas are refillable.
+    </div>
+  </div>
+
+</section>
+
+<footer>
+  <h3>Pho 5Plus</h3>
+  <p>8236 Kirby Dr Suite 160, Houston, TX 77054</p>
+  <p>📞 +1 (346) 618-1384</p>
+  <p class="cta">Come in for a bowl. Stay for the comfort.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
