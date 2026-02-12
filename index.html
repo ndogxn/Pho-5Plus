@@ -144,14 +144,17 @@
 .menu-item {
   display: flex;
   justify-content: space-between;
-  padding: 0.45rem 0;
-  border-bottom: 1px dotted #ccc;
-  font-size: 0.95rem;
+  align-items: baseline;
+  padding: 6px 0;
+  background: none;          /* removes white box */
+  border-radius: 0;          /* removes rounded corners */
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+  transition: none;          /* removes hover animation */
 }
 
-.menu-item span {
-  font-weight: 500;
-  white-space: nowrap;
+.menu-item:hover {
+  background: none;
+  transform: none;
 }
 
 @media (max-width: 768px) {
