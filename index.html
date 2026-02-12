@@ -1,120 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Pho 5Plus — Houston</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Pho 5Plus — Houston</title>
 
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
-  <style>
-    :root {
-      --bg: #f8f5f0;
-      --dark: #1e1e1e;
-      --accent: #9c6b3d;
-      --soft: #efe7dd;
-    }
+<style>
+:root {
+  --bg: #f8f5f0;
+  --dark: #1e1e1e;
+  --accent: #9c6b3d;
+}
 
-    body {
-      margin: 0;
-      font-family: Inter, sans-serif;
-      background: var(--bg);
-      color: var(--dark);
-      line-height: 1.6;
-    }
+* {
+  box-sizing: border-box;
+}
 
-    header {
-      min-height: 90vh;
-      background: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)),
-        url("https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?auto=format&fit=crop&w=1600&q=80")
-        center/cover;
-      color: white;
-      display: flex;
-      align-items: center;
-      padding: 3rem;
-    }
+body {
+  margin: 0;
+  font-family: Inter, sans-serif;
+  background: var(--bg);
+  color: var(--dark);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
 
-    .hero {
-      max-width: 600px;
-    }
+/* ===== HERO ===== */
 
-    h1 {
-      font-family: "Playfair Display", serif;
-      font-size: clamp(2.5rem, 5vw, 4rem);
-      margin-bottom: 1rem;
-    }
+header {
+  min-height: 90vh;
+  background: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)),
+  url("https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?auto=format&fit=crop&w=1600&q=80")
+  center/cover;
+  color: white;
+  display: flex;
+  align-items: center;
+  padding: 3rem;
+}
 
-    .hero p {
-      font-size: 1.1rem;
-      opacity: .95;
-    }
+.hero {
+  max-width: 600px;
+}
 
-    section {
-      padding: 4rem 2rem;
-      max-width: 1100px;
-      margin: auto;
-    }
+h1 {
+  font-family: "Playfair Display", serif;
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  margin-bottom: 1rem;
+}
 
-    .section-title {
-      font-family: "Playfair Display", serif;
-      font-size: 2.2rem;
-      margin-bottom: 2rem;
-      text-align: center;
-    }
-
-    /* Signature Favorites */
-
-    .menu-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 2rem;
-    }
-
-    .menu-item {
-      background: white;
-      border-radius: 16px;
-      overflow: hidden;
-      box-shadow: 0 15px 40px rgba(0,0,0,.06);
-      transition: .3s ease;
-    }
-
-    .menu-item:hover {
-      transform: translateY(-5px);
-    }
-
-    .menu-item img {
-      width: 100%;
-      height: 200px;
-      object-fit: cover;
-    }
-
-    .menu-item div {
-      padding: 1.2rem;
-    }
-
-    /* Reviews */
-
-    .reviews {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 2rem;
-    }
-
-    .review {
-      background: white;
-      padding: 2rem;
-      border-radius: 16px;
-      box-shadow: 0 10px 30px rgba(0,0,0,.05);
-    }
-
-    /* Menu Layout */
-
-  /* MENU SECTION CLEAN VERSION */
-.menu-section {
+.section-container {
   max-width: 1100px;
   margin: auto;
   padding: 4rem 2rem;
 }
+
+.section-title {
+  font-family: "Playfair Display", serif;
+  font-size: 2.2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+/* ===== SIGNATURE ===== */
+
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+}
+
+.menu-card {
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 15px 40px rgba(0,0,0,.06);
+  transition: .3s ease;
+}
+
+.menu-card:hover {
+  transform: translateY(-5px);
+}
+
+.menu-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.menu-card div {
+  padding: 1.2rem;
+}
+
+/* ===== REVIEWS ===== */
+
+.reviews {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.review {
+  background: white;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,.05);
+}
+
+/* ===== MENU ===== */
 
 .menu-category {
   margin-bottom: 3.5rem;
@@ -123,14 +117,14 @@
 .menu-category h3 {
   font-family: "Playfair Display", serif;
   font-size: 1.6rem;
-  margin-bottom: 0.5rem;
+  margin-bottom: .5rem;
   border-bottom: 2px solid #ddd;
-  padding-bottom: 0.4rem;
+  padding-bottom: .4rem;
 }
 
 .menu-note {
-  font-size: 0.9rem;
-  opacity: 0.7;
+  font-size: .9rem;
+  opacity: .7;
   margin-bottom: 1rem;
   font-style: italic;
 }
@@ -144,17 +138,8 @@
 .menu-item {
   display: flex;
   justify-content: space-between;
-  align-items: baseline;
   padding: 6px 0;
-  background: none;          /* removes white box */
-  border-radius: 0;          /* removes rounded corners */
   border-bottom: 1px solid rgba(0,0,0,0.1);
-  transition: none;          /* removes hover animation */
-}
-
-.menu-item:hover {
-  background: none;
-  transform: none;
 }
 
 @media (max-width: 768px) {
@@ -163,41 +148,19 @@
   }
 }
 
-    .contact-section {
-  background-color: #1f1f1f;
-  color: #f5f5f5;
-  padding: 80px 20px;
-  text-align: center;
-}
+/* ===== CONTACT ===== */
 
-.contact-section h2 {
-  font-size: 32px;
-  margin-bottom: 15px;
-}
-
-.contact-section p {
-  font-size: 18px;
-  margin: 8px 0;
-}
-
-.contact-section .tagline {
-  margin-top: 20px;
-  font-style: italic;
-  font-size: 20px;
-}
-
-    /* FULL WIDTH CONTACT SECTION */
 .contact-full {
   background: #1c1c1c;
-  color: #fff;
+  color: white;
   width: 100%;
   padding: 80px 20px;
+  text-align: center;
 }
 
 .contact-inner {
   max-width: 1000px;
-  margin: 0 auto;
-  text-align: center;
+  margin: auto;
 }
 
 .contact-full h2 {
@@ -205,18 +168,13 @@
   margin-bottom: 15px;
 }
 
-.contact-full p {
-  margin: 8px 0;
-  font-size: 16px;
-}
-
 .contact-full .tagline {
   margin-top: 20px;
   font-style: italic;
-  opacity: 0.9;
+  opacity: .9;
 }
 
-  </style>
+</style>
 </head>
 
 <body>
@@ -228,51 +186,41 @@
   </div>
 </header>
 
-<section>
-  <h2 class="section-title">Signature Favorites</h2>
+<!-- SIGNATURE -->
+<section class="section-container">
+<h2 class="section-title">Signature Favorites</h2>
 
-  <div class="menu-grid">
-    
-    <div class="menu-item">
-      <img src="images/eye_round_pho.jpg" alt="Eye-Round Steak Pho">
-      <div>
-        <strong>Eye-Round Steak Pho</strong><br>
-        Fragrant beef broth with tender slices of steak.
-      </div>
-    </div>
-
-    <div class="menu-item">
-      <img src="images/fried_eggrolls.jpg" alt="Fried Pork Eggrolls">
-      <div>
-        <strong>Fried Pork Eggrolls</strong><br>
-        Golden, crispy rolls served with fish sauce.
-      </div>
-    </div>
-
-    <div class="menu-item">
-      <img src="images/butterfly_shrimp.jpg" alt="Fried Butterfly Shrimp">
-      <div>
-        <strong>Fried Butterfly Shrimp</strong><br>
-        Lightly battered and served with sweet & sour sauce.
-      </div>
-    </div>
-
+<div class="menu-grid">
+  <div class="menu-card">
+    <img src="images/eye_round_pho.jpg">
+    <div><strong>Eye-Round Steak Pho</strong><br>Fragrant beef broth with tender slices of steak.</div>
   </div>
+
+  <div class="menu-card">
+    <img src="images/fried_eggrolls.jpg">
+    <div><strong>Fried Pork Eggrolls</strong><br>Golden, crispy rolls served with fish sauce.</div>
+  </div>
+
+  <div class="menu-card">
+    <img src="images/butterfly_shrimp.jpg">
+    <div><strong>Fried Butterfly Shrimp</strong><br>Lightly battered and served with sweet & sour sauce.</div>
+  </div>
+</div>
 </section>
 
-<section>
-  <h2 class="section-title">What Guests Are Saying</h2>
-  <div class="reviews">
-    <div class="review">⭐️⭐️⭐️⭐️⭐️<br>
-    “The broth was rich and fragrant. Clean, welcoming atmosphere and incredible service.”</div>
-
-    <div class="review">⭐️⭐️⭐️⭐️⭐️<br>
-    “Best Bun Bo Hue and pho in Houston. Authentic flavors and very hospitable staff.”</div>
-
-    <div class="review">⭐️⭐️⭐️⭐️⭐️<br>
-    “Quick service, generous portions, and all the sauces ready at the table. A true neighborhood gem.”</div>
-  </div>
+<!-- REVIEWS -->
+<section class="section-container">
+<h2 class="section-title">What Guests Are Saying</h2>
+<div class="reviews">
+  <div class="review">⭐️⭐️⭐️⭐️⭐️<br>“The broth was rich and fragrant. Clean, welcoming atmosphere and incredible service.”</div>
+  <div class="review">⭐️⭐️⭐️⭐️⭐️<br>“Best Bun Bo Hue and pho in Houston. Authentic flavors and very hospitable staff.”</div>
+  <div class="review">⭐️⭐️⭐️⭐️⭐️<br>“Quick service, generous portions, and all the sauces ready at the table. A true neighborhood gem.”</div>
+</div>
 </section>
+
+<!-- FULL MENU -->
+<section class="section-container">
+<h2 class="section-title">Full Menu</h2>
 
 <section>
 <section id="menu" class="menu-section">
@@ -401,9 +349,10 @@
       </div>
     </div>
   </div>
+</section>
 
-</section> <!-- previous section ends -->
-
+</section>
+<!-- CONTACT -->
 <section class="contact-full">
   <div class="contact-inner">
     <h2>Pho 5Plus</h2>
@@ -412,8 +361,6 @@
     <p class="tagline">Come in for a bowl. Stay for the comfort.</p>
   </div>
 </section>
-
-<footer>...</footer>
 
 <script src="script.js"></script>
 </body>
